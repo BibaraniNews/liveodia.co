@@ -1,0 +1,16 @@
+<html ng-app="app">
+	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	</head>
+	<body ng-controller="indexController">
+		<div class="row">
+			<div class="col-lg-7">
+				<input type="file" name="" multiple ng-files="getTheFile($file)">
+			</div>
+			<div class="col-lg-5">
+				<input type="button" name="" ng-click="uploadFiles()" value="upload">
+				<input type="button" name="" ng-click="reset()" value="Reset">
+			</div>
+		</div>
+	</body>
+</html>
