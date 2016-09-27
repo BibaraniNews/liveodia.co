@@ -12,7 +12,7 @@ app.controller("indexController",['$scope','$http',function($scope,$http){
 
 			reader.onload=function(event){
 				var image={};
-				image.name=event.target.filename;
+				image.name=event.target.fileName;
 				image.size=(event.total/1024).toFixed(2);
 				image.Src=event.target.result;
 				$scope.imgSrc.push(image);
@@ -30,10 +30,10 @@ app.controller("indexController",['$scope','$http',function($scope,$http){
 		var request={
 			method:"POST",
 			url:"api/fileUpload",
-			data:formdata;
+			data:formdata,
 			headers:
 			{
-				'Containt-type':undefind;
+				'Containt-type':undefind
 			}
 		};
 		$http(request).success(function(data){

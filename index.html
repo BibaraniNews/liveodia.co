@@ -5,7 +5,13 @@
 	<body ng-controller="indexController">
 		<div class="row">
 			<div class="col-lg-7">
-				<input type="file" name="" multiple ng-files="getTheFile($file)">
+			<ul>
+				<li ng-repeat="imgs in imgSrc track by $index">
+					<img src="{{imgs.Src}}">
+				</li>
+			</ul>
+			
+				<input type="file" name="" multiple ng-file="getTheFile($files)">
 			</div>
 			<div class="col-lg-5">
 				<input type="button" name="" ng-click="uploadFiles()" value="upload">
