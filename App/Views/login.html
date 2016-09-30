@@ -1,0 +1,63 @@
+﻿<div class="about spacer">
+    <div class="row">
+        <div class="col-sm-8 wowload fadeInLeft">
+            <h2>Lorem ipsum sample text here </h2>
+            <p>Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs, lead by passionate and uber progressive team that lives and breathes design. Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <a href=""><strong>Lorem ipsum sample text here<span class="glyphicon glyphicon-forward"></span></strong></a>
+        </div>
+        <div class="col-sm-4 wowload fadeInRight">
+            <div class="login-box-body">
+                <h4>Sign In</h4>
+                <form method="post">
+                    <div class="form-group has-feedback">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </span>
+                            <select class="form-controlSelect" name="userRole" id="userRole" ng-change="changeOption();"
+                                    ng-options="option.name for option in data.availableRoles track by option.id"
+                                    ng-model="data.selectedOption"></select>
+                            <!--<select class="form-controlSelect" ng-model="loginData.userRole">
+
+
+                                <option>Select Your Role?</option>
+                                <option>Admin</option>
+                                <option>User</option>
+                            </select>-->
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </span>
+                            <input class="form-control" type="text" placeholder="User Name" ng-model="loginData.userName">
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </span>
+                            <input class="form-control" type="password" placeholder="Password" ng-model="loginData.password">
+                        </div>
+                        <br />
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a class="btn btn-warning btn-block btn-flat" ng-click="login();">Sign In</a>
+                        </div>
+                    </div>
+                    <br />
+                    {{message}}
+                </form>
+                <br />
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <a href="#">Forgot Password?  </a>|
+                        <a href="register.html">Unable To Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
