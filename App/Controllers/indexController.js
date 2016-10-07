@@ -8,6 +8,12 @@ LiveOdiaApp.controller('indexController', ['$scope', '$rootScope', '$location', 
         $location.path('/home');
     };
     // $scope.fullnews = [];
+     /* 
+
+ $scope.FormatData = function () {
+        debugger;
+        $scope.fullnews.push($scope.fnews);
+$scope.fullnews = [];
     $scope.fnews = {
         "fullnews": [
           {
@@ -18,16 +24,16 @@ LiveOdiaApp.controller('indexController', ['$scope', '$rootScope', '$location', 
                   "hsub": "adsfjkhasklfkl"
               },
               "topnews": {
-                  "hnid": null,
-                  "hotnews": null,
+                  "tnid": 0,
+                  "topnews": null,
                   "title": null,
-                  "hsub": null
+                  "tsub": null
               },
               "newstory": {
-                  "hnid": 0,
-                  "hotnews": null,
+                  "nnid": 0,
+                  "newstory": null,
                   "title": null,
-                  "hsub": null
+                  "nsub": null
               }
           }, {
               "hotnews": {
@@ -37,16 +43,16 @@ LiveOdiaApp.controller('indexController', ['$scope', '$rootScope', '$location', 
                   "hsub": null
               },
               "topnews": {
-                  "hnid": 1,
-                  "hotnews": "asdaskldjals",
+                  "tnid": 1,
+                  "topnews": "asdaskldjals",
                   "title": "saddlajdsas",
-                  "hsub": "asdjaksdad"
+                  "tsub": "asdjaksdad"
               },
               "newstory": {
-                  "hnid": 0,
-                  "hotnews": null,
+                  "nnid": 0,
+                  "newstory": null,
                   "title": null,
-                  "hsub": null
+                  "nsub": null
               }
           },
           {
@@ -57,23 +63,23 @@ LiveOdiaApp.controller('indexController', ['$scope', '$rootScope', '$location', 
                   "hsub": null
               },
               "topnews": {
-                  "hnid": 0,
-                  "hotnews": null,
+                  "tnid": 0,
+                  "topnews": null,
                   "title": null,
-                  "hsub": null
+                  "tsub": null
               },
               "newstory": {
-                  "hnid": 1,
-                  "hotnews": "sajdsadjald",
+                  "nnid": 1,
+                  "newstory": "sajdsadjald",
                   "title": "askdjalskdjla",
-                  "hsub": "aksdjsalsdjald"
+                  "nsub": "aksdjsalsdjald"
               }
           }
         ]
 
     };
 
-  /*  $scope.FormatData = function () {
+    $scope.FormatData = function () {
         debugger;
         $scope.fullnews.push($scope.fnews);
         var clean = pruneEmpty($scope.fullnews);
@@ -86,7 +92,7 @@ LiveOdiaApp.controller('indexController', ['$scope', '$rootScope', '$location', 
             debugger;
             _.forOwn(current, function (value, key) {
                 if (_.isUndefined(value) || _.isNull(value) || _.isNaN(value) ||
-                  (_.isString(value) && _.isEmpty(value)) || _.isNumber(value==0)||
+                  (_.isString(value) && _.isEmpty(value)) ||_.includes(value, 0)||
                   (_.isObject(value) && _.isEmpty(prune(value)))) {
                     delete current[key];
                 }
