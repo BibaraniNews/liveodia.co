@@ -7,59 +7,97 @@ LiveOdiaApp.controller('indexController', ['$scope', '$rootScope', '$location', 
         loginServiceFactory.logOut();
         $location.path('/home');
     };
-    //$scope.ActiveView = function (path) {
-    //    debugger;
-    //    if (path === "/home") {
-    //        $scope.viewActive = true;
-    //    }
-    //    return $scope.viewActive;
-    //};
-    //$scope.fullnews = [];
-    //$scope.hotNews = [];
-    //$scope.topstories=[];
-    //$scope.newsories=[];
-    //$scope.getAllNews = function () {
-    //    homeServiceFactory.getAllNews().then(function (newsData) {
-    //        debugger;
-    //        if (newsData) {
-    //            $scope.fullnews = newsData.fullnews;
-    //            angular.forEach($scope.fullnews, function (value, key) {
-    //                if (value.HotNews)
-    //                    $scope.hotNews.push({ "title": value.HotNews.TITLE, "newsid": value.HotNews.HID });
-    //                if (value.TopNews)
-    //                    $scope.topstories.push({ "title": value.TopNews.TITLE, "topnews": value.TopNews.TopNews, "tnewsid": value.fnews.FnId });
-    //                if (value.NewStory)
-    //                    $scope.newsories.push({ "title": value.NewStory.TITLE });
-    //            });
-    //        }
-    //    });
-    //};
+    // $scope.fullnews = [];
+    $scope.fnews = {
+        "fullnews": [
+          {
+              "hotnews": {
+                  "hnid": 1,
+                  "hotnews": "asdfasdf",
+                  "title": "asl;dasdjla",
+                  "hsub": "adsfjkhasklfkl"
+              },
+              "topnews": {
+                  "hnid": null,
+                  "hotnews": null,
+                  "title": null,
+                  "hsub": null
+              },
+              "newstory": {
+                  "hnid": 0,
+                  "hotnews": null,
+                  "title": null,
+                  "hsub": null
+              }
+          }, {
+              "hotnews": {
+                  "hnid": 0,
+                  "hotnews": null,
+                  "title": null,
+                  "hsub": null
+              },
+              "topnews": {
+                  "hnid": 1,
+                  "hotnews": "asdaskldjals",
+                  "title": "saddlajdsas",
+                  "hsub": "asdjaksdad"
+              },
+              "newstory": {
+                  "hnid": 0,
+                  "hotnews": null,
+                  "title": null,
+                  "hsub": null
+              }
+          },
+          {
+              "hotnews": {
+                  "hnid": 0,
+                  "hotnews": null,
+                  "title": null,
+                  "hsub": null
+              },
+              "topnews": {
+                  "hnid": 0,
+                  "hotnews": null,
+                  "title": null,
+                  "hsub": null
+              },
+              "newstory": {
+                  "hnid": 1,
+                  "hotnews": "sajdsadjald",
+                  "title": "askdjalskdjla",
+                  "hsub": "aksdjsalsdjald"
+              }
+          }
+        ]
 
-    //$scope.getAllNews();
+    };
 
-    //$scope.getHotFullNews = function (hnid) {
-    //    debugger;
-    //    homeServiceFactory.getHotFullNews(hnid).then(function (hnewsdata) {
-    //        if (hnewsdata) {
-    //            debugger;
-    //            $scope.hnewsDetail = hnewsdata;
-    //        };
-    //    })
-    //};
-    //$scope.topstories = [
-    //    {
-    //        newsid: '01',
-    //        title: 'ପୁଣି ତିନି ଚାଷୀଙ୍କ ଆତ୍ମହତ୍ୟା ଅଭିଯୋଗ',
-    //        topnews: 'ବଲାଙ୍ଗିର/କେନ୍ଦୁଝର: ଆଜି ପୁଣି ତିନି ଜଣ ଚାଷୀ ଆତ୍ମହତ୍ୟା କରିଥିବା ଅଭିଯୋଗ ହୋଇଛି। ପ୍ରାଣ ହରାଇଥିବା ୩ ଚାଷୀଙ୍କ ମଧ୍ୟରୁ ଦୁଇ ଜଣ ବଲାଙ୍ଗିରର ଓ ଜଣେ କେନ୍ଦୁଝରର। ବଲାଙ୍ଗିରରେ ଆତ୍ମହତ୍ୟା କରିଥିବା ଦୁଇ ଜଣ ଚାଷୀ ହେଲେ ପରିକ୍ଷିତ ନାଗ ଓ କୃତିବାସ ଗହିର।'
-    //    },
-    //    {
-    //        newsid: '02',
-    //        title: 'ପୁଣି ତିନି ଚାଷୀଙ୍କ ଆତ୍ମହତ୍ୟା ଅଭିଯୋଗ',
-    //        topnews: 'ବଲାଙ୍ଗିର/କେନ୍ଦୁଝର: ଆଜି ପୁଣି ତିନି ଜଣ ଚାଷୀ ଆତ୍ମହତ୍ୟା କରିଥିବା ଅଭିଯୋଗ ହୋଇଛି। ପ୍ରାଣ ହରାଇଥିବା ୩ ଚାଷୀଙ୍କ ମଧ୍ୟରୁ ଦୁଇ ଜଣ ବଲାଙ୍ଗିରର ଓ ଜଣେ କେନ୍ଦୁଝରର। ବଲାଙ୍ଗିରରେ ଆତ୍ମହତ୍ୟା କରିଥିବା ଦୁଇ ଜଣ ଚାଷୀ ହେଲେ ପରିକ୍ଷିତ ନାଗ ଓ କୃତିବାସ ଗହିର।'
-    //    },
-    //    {
-    //        newsid: '03',
-    //        title: 'ପୁଣି ତିନି ଚାଷୀଙ୍କ ଆତ୍ମହତ୍ୟା ଅଭିଯୋଗ',
+  /*  $scope.FormatData = function () {
+        debugger;
+        $scope.fullnews.push($scope.fnews);
+        var clean = pruneEmpty($scope.fullnews);
+        console.log(JSON.stringify(clean, null, 2));
+    };
+
+    function pruneEmpty(obj) {
+        debugger;
+        return function prune(current) {
+            debugger;
+            _.forOwn(current, function (value, key) {
+                if (_.isUndefined(value) || _.isNull(value) || _.isNaN(value) ||
+                  (_.isString(value) && _.isEmpty(value)) || _.isNumber(value==0)||
+                  (_.isObject(value) && _.isEmpty(prune(value)))) {
+                    delete current[key];
+                }
+            });
+            // remove any leftover undefined values from the delete 
+            // operation on an array
+            if (_.isArray(current)) _.pull(current, undefined);
+            return current;
+
+        }(_.cloneDeep(obj));
+    }
     //        topnews: 'ବଲାଙ୍ଗିର/କେନ୍ଦୁଝର: ଆଜି ପୁଣି ତିନି ଜଣ ଚାଷୀ ଆତ୍ମହତ୍ୟା କରିଥିବା ଅଭିଯୋଗ ହୋଇଛି। ପ୍ରାଣ ହରାଇଥିବା ୩ ଚାଷୀଙ୍କ ମଧ୍ୟରୁ ଦୁଇ ଜଣ ବଲାଙ୍ଗିରର ଓ ଜଣେ କେନ୍ଦୁଝରର। ବଲାଙ୍ଗିରରେ ଆତ୍ମହତ୍ୟା କରିଥିବା ଦୁଇ ଜଣ ଚାଷୀ ହେଲେ ପରିକ୍ଷିତ ନାଗ ଓ କୃତିବାସ ଗହିର।'
     //    },
     //    {
@@ -113,6 +151,6 @@ LiveOdiaApp.controller('indexController', ['$scope', '$rootScope', '$location', 
     //    }
     //]
 
-    $scope.authentication = loginServiceFactory.authentication;
+    $scope.authentication = loginServiceFactory.authentication;*/
 
 }]);
